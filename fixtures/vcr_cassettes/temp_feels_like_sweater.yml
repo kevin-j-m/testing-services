@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.wunderground.com/api/test_key/conditions/q/02108.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.wunderground.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Type:
+      - application/json; charset=UTF-8
+      Last-Modified:
+      - Fri, 06 Oct 2017 01:21:46 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Cacheable:
+      - 'YES'
+      X-Creationtime:
+      - '0.056'
+      X-Varnish:
+      - '3987805208'
+      Vary:
+      - Accept-Encoding
+      Expires:
+      - Fri, 06 Oct 2017 01:21:46 GMT
+      Cache-Control:
+      - max-age=0, no-cache
+      Pragma:
+      - no-cache
+      Date:
+      - Fri, 06 Oct 2017 01:21:46 GMT
+      Content-Length:
+      - '2629'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: "\n{\n  \"response\": {\n  \"version\":\"0.1\",\n  \"termsofService\":\"http://www.wunderground.com/weather/api/d/terms.html\",\n
+        \ \"features\": {\n  \"conditions\": 1\n  }\n\t}\n  ,\t\"current_observation\":
+        {\n\t\t\"image\": {\n\t\t\"url\":\"http://icons.wxug.com/graphics/wu2/logo_130x80.png\",\n\t\t\"title\":\"Weather
+        Underground\",\n\t\t\"link\":\"http://www.wunderground.com\"\n\t\t},\n\t\t\"display_location\":
+        {\n\t\t\"full\":\"Boston, MA\",\n\t\t\"city\":\"Boston\",\n\t\t\"state\":\"MA\",\n\t\t\"state_name\":\"Massachusetts\",\n\t\t\"country\":\"US\",\n\t\t\"country_iso3166\":\"US\",\n\t\t\"zip\":\"02108\",\n\t\t\"magic\":\"1\",\n\t\t\"wmo\":\"99999\",\n\t\t\"latitude\":\"42.36000061\",\n\t\t\"longitude\":\"-71.06999969\",\n\t\t\"elevation\":\"21.9\"\n\t\t},\n\t\t\"observation_location\":
+        {\n\t\t\"full\":\"Boston, Boston, Massachusetts\",\n\t\t\"city\":\"Boston,
+        Boston\",\n\t\t\"state\":\"Massachusetts\",\n\t\t\"country\":\"US\",\n\t\t\"country_iso3166\":\"US\",\n\t\t\"latitude\":\"42.364578\",\n\t\t\"longitude\":\"-71.059906\",\n\t\t\"elevation\":\"0
+        ft\"\n\t\t},\n\t\t\"estimated\": {\n\t\t},\n\t\t\"station_id\":\"KMABOSTO258\",\n\t\t\"observation_time\":\"Last
+        Updated on October 5, 9:11 PM EDT\",\n\t\t\"observation_time_rfc822\":\"Thu,
+        05 Oct 2017 21:11:03 -0400\",\n\t\t\"observation_epoch\":\"1507252263\",\n\t\t\"local_time_rfc822\":\"Thu,
+        05 Oct 2017 21:21:46 -0400\",\n\t\t\"local_epoch\":\"1507252906\",\n\t\t\"local_tz_short\":\"EDT\",\n\t\t\"local_tz_long\":\"America/New_York\",\n\t\t\"local_tz_offset\":\"-0400\",\n\t\t\"weather\":\"Mostly
+        Cloudy\",\n\t\t\"temperature_string\":\"63.1 F (17.3 C)\",\n\t\t\"temp_f\":63.1,\n\t\t\"temp_c\":17.3,\n\t\t\"relative_humidity\":\"62%\",\n\t\t\"wind_string\":\"From
+        the WNW at 1.2 MPH Gusting to 5.6 MPH\",\n\t\t\"wind_dir\":\"WNW\",\n\t\t\"wind_degrees\":300,\n\t\t\"wind_mph\":1.2,\n\t\t\"wind_gust_mph\":\"5.6\",\n\t\t\"wind_kph\":1.9,\n\t\t\"wind_gust_kph\":\"9.0\",\n\t\t\"pressure_mb\":\"1016\",\n\t\t\"pressure_in\":\"29.99\",\n\t\t\"pressure_trend\":\"+\",\n\t\t\"dewpoint_string\":\"50
+        F (10 C)\",\n\t\t\"dewpoint_f\":50,\n\t\t\"dewpoint_c\":10,\n\t\t\"heat_index_string\":\"NA\",\n\t\t\"heat_index_f\":\"NA\",\n\t\t\"heat_index_c\":\"NA\",\n\t\t\"windchill_string\":\"NA\",\n\t\t\"windchill_f\":\"NA\",\n\t\t\"windchill_c\":\"NA\",\n\t\t\"feelslike_string\":\"63.1
+        F (17.3 C)\",\n\t\t\"feelslike_f\":\"63.1\",\n\t\t\"feelslike_c\":\"17.3\",\n\t\t\"visibility_mi\":\"10.0\",\n\t\t\"visibility_km\":\"16.1\",\n\t\t\"solarradiation\":\"--\",\n\t\t\"UV\":\"0\",\"precip_1hr_string\":\"-999.00
+        in ( 0 mm)\",\n\t\t\"precip_1hr_in\":\"-999.00\",\n\t\t\"precip_1hr_metric\":\"
+        0\",\n\t\t\"precip_today_string\":\"0.08 in (2 mm)\",\n\t\t\"precip_today_in\":\"0.08\",\n\t\t\"precip_today_metric\":\"2\",\n\t\t\"icon\":\"mostlycloudy\",\n\t\t\"icon_url\":\"http://icons.wxug.com/i/c/k/nt_mostlycloudy.gif\",\n\t\t\"forecast_url\":\"http://www.wunderground.com/US/MA/Boston.html\",\n\t\t\"history_url\":\"http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KMABOSTO258\",\n\t\t\"ob_url\":\"http://www.wunderground.com/cgi-bin/findweather/getForecast?query=42.364578,-71.059906\",\n\t\t\"nowcast\":\"\"\n\t}\n}\n"
+    http_version: 
+  recorded_at: Fri, 06 Oct 2017 01:21:46 GMT
+recorded_with: VCR 3.0.3
