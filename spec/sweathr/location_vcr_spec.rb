@@ -3,11 +3,10 @@ require "sweathr/location"
 RSpec.describe Sweathr::Location do
   describe "#sweater_weather?" do
     before do
-      @test_api_key = ENV["API_KEY"]
-      ENV["API_KEY"] = "test_key"
+      Sweathr::Weather.client = Sweathr::Weather::Api.new(api_key: "test_key")
     end
 
-    after { ENV["API_KEY"] = @test_api_key }
+    after { Sweathr::Weather.client = Sweathr::Weather::Api.new }
 
     it "says it's time to break out the sweater" do
       weather = Sweathr::Location.new(zip_code: "02108")

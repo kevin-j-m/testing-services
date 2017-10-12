@@ -1,8 +1,4 @@
-require "dotenv/load"
-require "net/http"
-require "json"
-
-require "sweathr/weather/api"
+require "sweathr/weather"
 
 module Sweathr
   class Location
@@ -11,20 +7,9 @@ module Sweathr
     end
 
     def sweater_weather?
-      # uri = URI("http://api.wunderground.com/api/#{api_key}/conditions/q/#{@zip_code}.json")
-      # result = Net::HTTP.get(uri)
+      current_conditions = Sweathr::Weather.current_conditions(zip_code: @zip_code)
 
-      result = Sweathr::Weather::Api.new.current_conditions(zip_code: @zip_code)
-      response = JSON.parse(result)
-
-      feels_like = response.dig("current_observation", "feelslike_f")
-      feels_like.to_f.between?(55, 65)
+      current_conditions.feels_like_f.between?(55, 65)
     end
-
-    # private
-    #
-    # def api_key
-    #   ENV["API_KEY"]
-    # end
   end
 end

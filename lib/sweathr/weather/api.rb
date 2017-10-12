@@ -1,3 +1,7 @@
+require "dotenv/load"
+require "net/http"
+require "json"
+
 module Sweathr
   module Weather
     class Api
@@ -10,7 +14,7 @@ module Sweathr
       def current_conditions(zip_code:)
         uri = URI("#{auth_uri}/conditions/q/#{zip_code}.json")
 
-        Net::HTTP.get(uri)
+        JSON.parse(Net::HTTP.get(uri))
       end
 
       private
