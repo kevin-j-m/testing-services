@@ -6,7 +6,16 @@ module Sweathr
       end
 
       def feels_like_f
-        @results.dig("current_observation", "feelslike_f").to_f
+        value = @results.dig("current_observation", "feelslike_f")
+        string_to_float(value)
+      end
+
+      private
+
+      def string_to_float(value)
+        Float(value)
+      rescue
+        nil
       end
     end
   end
