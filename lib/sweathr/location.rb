@@ -3,7 +3,7 @@ require "net/http"
 require "json"
 
 module Sweathr
-  class Weather
+  class Location
     def initialize(zip_code:)
       @zip_code = zip_code
     end

@@ -1,6 +1,6 @@
-require "sweathr/weather"
+require "sweathr/location"
 
-RSpec.describe Sweathr::Weather do
+RSpec.describe Sweathr::Location do
   describe "#sweater_weather?" do
     let(:api_response) { { current_observation: { feelslike_f: feels_like } }.to_json }
 
@@ -8,7 +8,7 @@ RSpec.describe Sweathr::Weather do
       let(:feels_like) { "55.0" }
 
       it "says it's time to break out the sweater" do
-        weather = Sweathr::Weather.new(zip_code: "02108")
+        weather = Sweathr::Location.new(zip_code: "02108")
 
         stub_request(:get, "http://api.wunderground.com/api/#{ENV['API_KEY']}/conditions/q/02108.json")
           .to_return(status: 200, body: api_response)
@@ -21,7 +21,7 @@ RSpec.describe Sweathr::Weather do
       let(:feels_like) { "54.9" }
 
       it "advises against the sweater" do
-        weather = Sweathr::Weather.new(zip_code: "02108")
+        weather = Sweathr::Location.new(zip_code: "02108")
 
         stub_request(:get, "http://api.wunderground.com/api/#{ENV['API_KEY']}/conditions/q/02108.json")
           .to_return(status: 200, body: api_response)
@@ -34,7 +34,7 @@ RSpec.describe Sweathr::Weather do
       let(:feels_like) { "65.1" }
 
       it "advises against the sweater" do
-        weather = Sweathr::Weather.new(zip_code: "02108")
+        weather = Sweathr::Location.new(zip_code: "02108")
 
         stub_request(:get, "http://api.wunderground.com/api/#{ENV['API_KEY']}/conditions/q/02108.json")
           .to_return(status: 200, body: api_response)
