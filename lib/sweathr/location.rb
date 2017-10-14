@@ -4,12 +4,15 @@ require "json"
 
 module Sweathr
   class Location
+    attr_accessor :endpoint_url
+
     def initialize(zip_code:)
       @zip_code = zip_code
+      @endpoint_url = "http://api.wunderground.com"
     end
 
     def sweater_weather?
-      uri = URI("http://api.wunderground.com/api/#{api_key}/conditions/q/#{@zip_code}.json")
+      uri = URI("#{@endpoint_url}/api/#{api_key}/conditions/q/#{@zip_code}.json")
       result = Net::HTTP.get(uri)
 
       response = JSON.parse(result)
