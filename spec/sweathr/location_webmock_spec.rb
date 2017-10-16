@@ -8,12 +8,12 @@ RSpec.describe Sweathr::Location do
       let(:feels_like) { "55.0" }
 
       it "says it's time to break out the sweater" do
-        weather = Sweathr::Location.new(zip_code: "02108")
+        location = Sweathr::Location.new(zip_code: "02108")
 
         stub_request(:get, "http://api.wunderground.com/api/#{ENV['API_KEY']}/conditions/q/02108.json")
           .to_return(status: 200, body: api_response)
 
-        expect(weather.sweater_weather?).to be true
+        expect(location.sweater_weather?).to be true
       end
     end
 
