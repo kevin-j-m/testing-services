@@ -22,7 +22,7 @@ This repository contains all of the code samples that accompany the [talk](fake_
 2. Data Representation
    * [Implementation](lib/sweathr/weather/current_conditions.rb)
    * [Test](spec/sweathr/weather/current_conditions_spec.rb)
-3. Orchestration
+3. Domain
    * [Implementation](lib/sweathr/weather.rb)
 4. Implementation
    * [Implementation](lib/sweathr/location.rb)
