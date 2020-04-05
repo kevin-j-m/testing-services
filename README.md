@@ -4,7 +4,7 @@ We all write code to interface with external systems, like a web service or a me
 
 There's no shortage of tools at your disposal to solve these problems. This talk will introduce some available options, provide guidance on when one approach may be more appropriate than another, and discuss how to use these tools together to ease the testing process.
 
-This repository contains all of the code samples that accompany the [talk](fake_it_while_you_make_it.key) of the same name.
+This repository contains all of the code samples that accompany the [talk](fake_it_while_you_make_it_railsconf.key) of the same name.
 
 ## Testing Methods
 
