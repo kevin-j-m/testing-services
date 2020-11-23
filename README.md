@@ -31,3 +31,7 @@ This repository contains all of the code samples that accompany the [talk](fake_
    * [Implementation](lib/sweathr/testing/fake_weather_client.rb)
 6. Testing
    * [Implementation](lib/sweathr/testing.rb)
+
+## Seen At
+
+* [RailsConf](https://www.youtube.com/watch?v=iEfpAp2sqiw) - May 4, 2020
