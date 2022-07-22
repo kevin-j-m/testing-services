@@ -82,7 +82,7 @@ GEM
     safe_yaml (1.0.5)
     thor (1.2.1)
     thread_safe (0.3.6)
-    tzinfo (1.2.9)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     vcr (5.1.0)
     webmock (3.8.3)
